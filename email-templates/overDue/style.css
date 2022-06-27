@@ -1,0 +1,73 @@
+body {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: Muli;
+  }
+  
+  .portal-url {
+    padding-top: 80px;
+  }
+  
+  .logo-url {
+    cursor: pointer !important;
+    text-decoration: none;
+  }
+  
+  .portal-logo {
+    display: block;
+    margin: auto;
+  }
+  
+  .login-button {
+    border-radius: 5px;
+    text-align:center;
+    background-color:#009dda !important;
+    color:white;border: none;
+    text-decoration: none;
+    height:40px;
+    width: 244px;
+    font-size:16px;
+    padding: 13px 45px;
+    cursor: pointer;
+    font-weight: 800;
+  }
+  
+  .portal-message {
+    text-align:center;
+    padding-top:12%;
+    font-weight: bold;
+    color: #292934;
+    line-height: 29px;
+    font-size: 24px;
+    letter-spacing: 0.1px;
+  }
+  
+  .container {
+    border:1px solid white;
+    display: block;
+    margin: auto auto;
+    height:344px;
+    width: 600px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    margin-top:30px;
+  }
+  
+  .btn-section {
+    text-align: center;
+    margin-top:5%;
+    cursor: pointer;
+  }
+  
+  .text-decoration {
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .portal-container {
+    display: block;
+    width:100%;
+    background-size: cover;
+    background-color: #F3F3F5 !important;
+    height:600px;
+  }

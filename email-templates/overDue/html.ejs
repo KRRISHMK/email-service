@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html
+        lang="en"
+        style="
+    margin: 0;
+    min-height: 100%;
+    background-color: #F4F4F6;
+  "
+>
+<head>
+   <meta charset="UTF-8" />
+   <meta
+           name="viewport"
+           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+   />
+   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   <title>Book Overdue Remainder</title>
+   <style>
+      /* Global */
+      @import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+      html,
+      body {
+         margin: 0;
+         min-height: 100%;
+         background: #F4F4F6;
+      }
+      #body {
+         width: 100%;
+         background-color: #F4F4F6;
+         min-height: 100%;
+         min-height: 100vh; /* if the browser supports it */
+         border-collapse: collapse;
+         font-family: 'Muli', sans-serif;
+      }
+      #main-wrapper {
+         margin: 0 auto;
+         padding: 34px 0;
+         width: 750px;
+      }
+      #main {
+         margin: 0 auto;
+         width: 750px;
+         border-collapse: collapse;
+      }
+      .align_center {
+         vertical-align: middle;
+      }
+      /* Header */
+      #logo {
+         
+         height: 24px;
+         display: block;
+      }
+      #logo img {
+         
+         height: 24px;
+         display: block;
+      }
+      #view-browser {
+         color: #87878c;
+         font-size: 12px;
+         font-weight: 500;
+         line-height: 24px;
+         text-align: center;
+      }
+      #login {
+         color: #009dda;
+         font-size: 14px;
+         font-weight: 500;
+         line-height: 24px;
+         text-align: right;
+         display: inline-block;
+      }
+      #login span {
+         margin-left: 8px;
+      }
+      /* Main Content */
+      #content {
+         padding-top: 34px;
+      }
+      #content-container {
+         padding: 60px 0 60px;
+         width: 100%;
+         background-color: #e86c61;
+      }
+      #basic-content {
+         color: #ffffff;
+         font-family: Muli, sans-serif;
+         font-size: 28px;
+         line-height: 35px;
+         padding: 0 55px 0 60px;
+      }
+      /* Playbook card */
+      #playbook-card {
+         width: 425px;
+         padding-left: 60px;
+      }
+      #playbook-body {
+         width: 256px;
+         border-collapse: collapse;
+      }
+      #playbook-image {
+         width: 100%;
+         padding: 0;
+      }
+      #playbook-image img {
+         display: block;
+         width: 100%;
+         max-width: 100%;
+      }
+      #bottom-content-container {
+         background-color: #fff;
+         border-collapse: collapse;
+         width: 100%;
+      }
+      #bottom-content-padding {
+         padding: 75px 60px 55px;
+      }
+      .title {
+         margin-top: 0;
+         font-weight: 500;
+      }
+      .text-content {
+         font-size: 16px;
+         line-height: 24px;
+         color:#000;
+      }
+      #footer {
+         padding: 30px 0;
+      }
+      #footer-container {
+         width: 100%;
+      }
+      #footer-container td {
+         vertical-align: middle;
+      }
+      #social-list {
+         list-style-type: none;
+         overflow: hidden;
+         margin: 0;
+         padding: 0;
+      }
+      #social-list li {
+         margin-right: 20px;
+         float: left;
+      }
+      #social-list li a {
+         display: block;
+      }
+      #social-list li a img {
+         width: 35px;
+         height: 32px;
+         display: block;
+      }
+      #copyright {
+         text-align: right;
+         color: #a0a0a0;
+      }
+
+      @media screen and (max-width: 767px) {
+         #basic-content,
+         #playbook-card {
+            display: block !important;
+            padding: 30px 0 !important;
+            margin: 0 auto !important;
+         }
+      }
+   </style>
+</head>
+<body
+        style="
+    margin: 0;
+    min-height: 100%;
+    background-color: #F4F4F6;
+  "
+>
+<table
+        id="body"
+        style="
+      width: 100%;
+      min-height: 100%;
+      min-height: 100vh;
+      background-color: #F4F4F6;
+      border-collapse: collapse;
+      font-family: 'Muli', sans-serif;
+    "
+>
+   <tr>
+      <td
+              id="main-wrapper"
+              align="center"
+              style="
+          margin: 0 auto;
+          width: 750px;
+          padding: 34px 0;
+        "
+      >
+         <!-- Above: This is the representation of the <body> tag -->
+
+         <table
+                 id="main"
+                 style="
+              margin: 0 auto;
+              width: 750px;
+              border-collapse: collapse;
+            "
+                 align="center"
+         >
+            <tr>
+               <td id="header">
+                  <table
+                          id="header-container"
+                          style="width: 100%; border-collapse: collapse;"
+                  >
+                     <tr>
+                        <td
+                                class="align_center w-33"
+                                style="
+                        vertical-align: middle;
+                        width: 33.3%;
+                      "
+                        >
+                        </td>
+                        <td
+                                class="align_center w-33"
+                                style="
+                        vertical-align: middle;
+                        text-align: center;
+                        width: 33.3%;
+                      "
+                        >
+                           <a
+                                   href="#"
+                                   id="view-browser"
+                                   style="
+                          color: #87878C;
+                          font-size: 12px;
+                          font-weight: 500;
+                          line-height: 24px;
+                          text-align: center;
+                        "
+                           >
+                              View this email in your browser
+                           </a>
+                        </td>
+                        <td
+                                class="align_center w-33"
+                                style="
+                        text-align: right;
+                        vertical-align: middle;
+                        width: 33.3%;
+                      "
+                        >
+                           <a
+                                   href="https://libraryfrontend.herokuapp.com/login"
+                                   id="login"
+                                   style="
+                                      color: #009dda;
+                                      font-size: 14px;
+                                      font-weight: 600;
+                                      line-height: 24px;
+                                      text-align: right;
+                                      display: inline-block;
+                                    "
+                           >
+                              Login
+                              <span
+                                      class="align_center"
+                                      style="
+                        width: 42px;
+                        height: 42px;
+                        border-radius: 100%;
+                        border: 1px solid #009dda;
+                        padding: 8px;
+                        color: #0a9dda;
+                        display: inline-block;
+                        box-sizing: border-box;
+                        vertical-align: middle;
+                        margin-left: 8px;
+                      "
+                              >
+                        </span>
+                           </a>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+            <tr>
+               <td
+                       id="content"
+                       style="
+                  padding-top: 34px;
+                "
+               >
+                  <table
+                          id="content-container"
+                          style="
+                    padding: 100px 0 100px;
+                    width: 100%;
+                    background-color: #000000;
+                  "
+                  >
+                     <tr>
+                        <td
+                                id="basic-content"
+                                style="
+                        color: #ffffff;
+                        font-family: Muli, sans-serif;
+                        font-size: 28px;
+                        line-height: 35px;
+                        padding: 0 0 0 60px;
+                        width: 425px;
+                      "
+                        >
+                           Your Book is Overdued
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+            <tr>
+               <td id="bottom-content">
+                  <table
+                          id="bottom-content-container"
+                          style="
+                    border-collapse: collapse;
+                    background-color:#fff;
+                    width: 100%;
+                  "
+                  >
+                     <tr>
+                        <td
+                                id="bottom-content-padding"
+                                style="
+                        padding: 75px 60px 55px;
+                      "
+                        >
+                           <p
+                           class="text-content"
+                           style="
+                  line-height: 24px;
+                  font-size: 32px;
+                  font-weight: lighter;
+
+                        "
+                           >
+                              Hi User,
+                     </p>
+
+                        </td>
+                     </tr>
+                        
+                     <tr>
+                        <td
+                                id="bottom-content-btn-wrapper"
+                                style="
+                    margin-top: 0;
+                    font-weight: 500;
+                    padding: 0 0 60px;
+                    text-align: center;
+                  "
+                        >
+                           <a
+                                   href="https://libraryfrontend.herokuapp.com/login"
+                                   style="
+                      color: #ffffff;
+                      font-family: 'Muli', sans-serif;
+                      font-size: 18px;
+                      font-weight: bold;
+                      letter-spacing: 0;
+                      line-height: 20px;
+                      text-align: center;
+                      padding: 17px 32px;
+                      background: #000000;
+                      border-radius: 6px;
+                      text-decoration: none;
+                    "
+                                   id="global-button"
+                           >
+                              Click to Review
+                           </a>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+            <tr>
+               <td id="footer" style="padding: 30px 0;">
+                  <table id="footer-container" style="width: 100%;">
+                     <tr>
+                        <td
+                                id="copyright"
+                                style="
+                        color: #a0a0a0;
+                        vertical-align: middle;
+                      "
+                        >
+                        governmentCollege@2022
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+         </table>
+
+         <!-- Below: This is the representation of the <body> tag -->
+      </td>
+   </tr>
+</table>
+</body>
+</html>
